@@ -1,0 +1,8 @@
+person(1..n).
+%person(1)=Mr.Brown,person(2)=Mr.Green,person(3)=Mr.Salmon
+col(1..n).
+%col(1)=Brown tie,col(2)= Green tie,col(3)=Salmon tie
+1 { wear(X,Y) : col(Y)} 1 :- person(X).
+1 { wear(X,Y) : person(X)} 1 :- col(Y).
+:- wear(X,Y), X==Y.
+:- wear(1,2).

@@ -1,0 +1,9 @@
+%person(1)=Mr.Brown,person(2)=Mr.Green,person(3)=Mr.Salmon
+person(1..n).
+%col(1)=Brown tie,col(2)= Green tie,col(3)=Salmon tie
+col(1..n).
+{ wear(X,Y) : person(X), col(Y),not X==Y}.
+:- col(Y), not 1{ wear(X,Y)} 1.
+:- person(X),  not 1{ wear(X,Y)} 1.
+:- wear(1,2).
+%:- wear(X,Y), X==Y.
