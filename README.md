@@ -1,2 +1,3 @@
 # logical_programming
-ASP
+Answer set programming (ASP)
+
